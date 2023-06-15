@@ -7,7 +7,7 @@ class node{
     node(int d){
         data=d;
         next=NULL;}
-        
+
 };
 void insertafront(node*& head,int data){
     node* n=new node(data);
