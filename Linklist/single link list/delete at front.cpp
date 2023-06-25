@@ -33,18 +33,16 @@ void insertatfront(node*& head,int data){
 
 int main(){
 node* head =NULL;
-insertatfront(head,5);
+insertatfront(head,1);
 insertatfront(head,2);
+insertatfront(head,3);
+insertatfront(head,4);
 insertatfront(head,5);
-insertatfront(head,2);
-insertatfront(head,5);
-insertatfront(head,2);
+insertatfront(head,6);
 print(head);
 cout<<"\n\n";
 del(head);
 del(head);
-del(head);
-del(head);
-del(head);
+
 print(head);
 }
