@@ -18,6 +18,7 @@ int partition(int arr[], int low, int high){
 	for (int j = low; j <= high - 1; j++) {
 
 
+
 		if (arr[j] < pivot) {
 
 			i++;
@@ -43,7 +44,7 @@ void quickSort(int arr[], int low, int high)
 
 int main()
 {
-	int arr[] = { 10,9,8,7,6,5,4,3,2,1 };
+	int arr[] = { 10,9,8,7,0,13,4,3,2,11 };
 	int N = sizeof(arr) / sizeof(arr[0]);
 
 

@@ -6,7 +6,7 @@
 #include<iostream>
 using namespace std;
 int main() {
-int arr[5],s;
+int arr[5],s=0;
 cout<<"enter the value";
 for (int i = 0; i <5; i++)
 {
@@ -15,18 +15,19 @@ for (int i = 0; i <5; i++)
 
 
 for (int i = 0; i < 5; i++)
-{   int a=10000;
+{   int a=arr[i];
     for(int j=i;j<5;j++)
     {
     if (a>arr[j])
     {
     a=arr[j];
        s=j;
- }
-    }
+
+    }}
         int temp=arr[i];
         arr[i]=arr[s];
         arr[s]=temp;
+
 }
 for (int i = 0; i < 5; i++)
 {
