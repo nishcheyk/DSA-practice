@@ -24,19 +24,37 @@ void delte(){
     }
     front++;
 }
+void display(){
+    if(front==-1){
+        cout<<"queue is empty";
+    }
+    else{
+        cout<<front;
+        cout<<"\n";
+        cout<<"queue elements are";
+        for (int i = front; i < rear; i++)
+        {
+            cout<<queue[i]<<" ";
+        }
+          cout<<"\n";
+    }
+}
 int main() {
+    display();
 enqueue(8);
 enqueue(2);
 enqueue(9);
 enqueue(3);
 enqueue(4);
-
+display();
+delte();z
+delte();
+display();
 delte();
 delte();
+delte();
 
-for (int i = front; i < rear+1; i++)
-{
-    cout<<queue[i]<<" ";
-}
+display();
+
 
 }

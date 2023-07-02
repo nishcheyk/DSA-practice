@@ -50,7 +50,7 @@ void darrays(){
 
     }
 
-//print of final multipication
+
     for (int i = 0; i < n; i++)
     {  cout<<" | ";
        for (int j = 0; j < l;j++)

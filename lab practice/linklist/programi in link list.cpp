@@ -48,7 +48,7 @@ void find(node* head,int key){
 }
 
 void update(node*&head,int r1,int r2){
-
+node*temp=head
     while (head->data!=r1)
     {
         head=head->next;
@@ -64,6 +64,20 @@ void del(node* head,int data){
     node* temp1= temp;
     temp=temp->next;
     free(temp1);
+}
+//reverse
+void reverse(node** head){
+     node* prev=NULL;
+     node* current=*head;
+     node* next=NULL;
+     while (current!=NULL)
+     {
+        next=current->next;
+        current->next=prev;
+        prev=current;
+        current= next;
+     }
+
 }
 void print (node* head){
     while (head!=NULL)
@@ -93,11 +107,14 @@ int main(){
     cout<<"\n";
     find(head,9);
     cout<<"\nupdate\n";
-    update(head,6,10);
+    update(head,2,10);
 
       print(head);
       cout<<"\ndelete\n";
-    del(head,7);
+   /// del(head,7);
     cout<<"\n";
+    print(head);
+    reverse(&head);
+    cout<<"\nreverse\n";
     print(head);
 }

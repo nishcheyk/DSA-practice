@@ -12,11 +12,7 @@ for (int i = 0; i < 4-count; i++)
             {
                for (int k = j; k < 3; k++)
                {
-
-
                     arr[k]=arr[k+1];
-
-
                }
             count++;
             }

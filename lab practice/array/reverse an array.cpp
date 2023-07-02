@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     int n;
-    std::cout<<"enter the array size";
+    cout<<"enter the array size";
     cin>>n;
   int arr[n],j=n-1;
 
