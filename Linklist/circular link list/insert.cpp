@@ -14,6 +14,7 @@ void insertatfirst(node*&head,int data){
     if(head==NULL){
      temp->next=temp;
      head=temp;
+     head->next=head;
     }
     else{
     node *temp1= head;

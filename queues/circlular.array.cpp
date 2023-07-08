@@ -2,7 +2,7 @@
 using namespace std;
 int queue[8],n=8,front=-1 ,rear=-1;
 void enqueue(int data){
-    if(front==rear+1%n){
+    if(front==rear+1){
         cout<<"overflow";
     }
     else{
@@ -35,7 +35,7 @@ void display(){
     else{
 
         cout<<"\n";
-        cout<<"queue elements are";
+        cout<<"queue elements are: ";
 
         for (int i = front; i <=rear; i++)
         {
@@ -54,4 +54,14 @@ enqueue(2);
 display();
 enqueue(15);
 display();
+cout<<"after del";
+dequeue();
+display();
+dequeue();
+display();
+dequeue();
+display();
+dequeue();
+///display();
+
 }
