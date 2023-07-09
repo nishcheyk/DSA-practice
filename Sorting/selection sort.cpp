@@ -15,19 +15,18 @@ for (int i = 0; i <5; i++)
 
 
 for (int i = 0; i < 5; i++)
-{   int a=arr[i];
+{   int min=i;
     for(int j=i;j<5;j++)
     {
-    if (a>arr[j])
+    if (arr[min]>arr[j])
     {
-    a=arr[j];
-       s=j;
-
+    min=j;
     }}
+    if(min!=i){
         int temp=arr[i];
-        arr[i]=arr[s];
-        arr[s]=temp;
-
+        arr[i]=arr[min];
+        arr[min]=temp;
+    }
 }
 for (int i = 0; i < 5; i++)
 {

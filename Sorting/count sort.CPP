@@ -1,40 +1,33 @@
 #include<iostream>
 using namespace std;
- void counting(int arr[],int n){
-    int numa[9];
-    for (int i = 0; i < 9; i++)
-    {   int count=0;
-        for (int j = 0; j < n; j++)
+void countingSort(int *a, int n){
+ int max=0,i=0;
+  while(i<=n){
+        if (a[i]>max)
         {
-            if (i==arr[j])
-            {
-                count++;
-            }
-
+           max=a[i];
         }
-        numa[i]=count;
+        i++;
 
     }
 
-int i=0, j=0;
-for (int i = 0; i < n;i++)
-{while (j<n)
-{
 
-  while (i!=numa[i])
-  {
-    arr[i]==numa[j];
-    i++;
-  }
+	int counting[max];
+	int k = 0;
+	for(int i = 0; i <=max; i++)
+		counting[i] = 0;
+	for(int i = 0; i < n; i++)
+		counting[a[i]]++;
+	for(int i = 0; i <=max; i++)
+	{
+		int count = counting[i];
+		for(int j = 0; j < count; j++)
+		{
+			a[k] = i;
+			k++;
+		}
+	}
 }
-
-}
-
-  for (int i = 0; i < 9; i++)
-    {
-        cout<<arr[i]<<" ";
-    }
- }
 
 int main(){
 
@@ -48,5 +41,9 @@ int main(){
         cin>>arr[i];
     }
 
-    counting(arr,n);
+    countingSort(arr,n);
+
+    for(int i = 0; i < n; i++)
+		cout << arr[i] << " ";
+	cout << endl;
 }
