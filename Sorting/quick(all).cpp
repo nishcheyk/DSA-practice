@@ -19,7 +19,7 @@ void quickSort(int *array, int low, int high)
             i++;
         while (array[j] > pivot)
             j--;
-        if (i <= j)
+        if (array[i] >= array[j])
         {
             temp = array[i];
             array[i] = array[j];
@@ -37,7 +37,7 @@ void quickSort(int *array, int low, int high)
 
 int main()
 {
-    int array[] = {95, 45, 48, 98, 1, 485, 65, 478, 1, 2325};
+    int array[] = {19,5,6,3,8,2,7,2,601,2222,4,21};
     int n = sizeof(array)/sizeof(array[0]);
 
     cout << "Before Quick Sort :" <<endl;

@@ -4,7 +4,7 @@ struct node
 {
     public:
     int data;
-    node* next,;
+    node* next;
     node(int d){
         data=d;
         next=NULL;
@@ -29,9 +29,9 @@ void print(node* head){
 }
 
 
-void reverse(node** head){
+void reverse(node* head){
      node* prev=NULL;
-     node* current=*head;
+     node* current=head;
      node* next=NULL;
      while (current!=NULL)
      {
@@ -40,10 +40,16 @@ void reverse(node** head){
         prev=current;
         current= next;
      }
-
+ head=prev;
+ while(head!=NULL){
+		cout<<head->data<<" ";
+		head=head->next;
+	}
 }
 
 int main(){
+
+
 
 node* head =NULL;
 insertatfront(&head,1);
@@ -54,12 +60,8 @@ insertatfront(&head,5);
 insertatfront(&head,6);
 print(head);
 cout<<"\n\n";
-reverse(&head);
+reverse(head);
 print(head);
 
-//del(head->next->next);
 
-
-//del(head);
-//print(head);
 }
