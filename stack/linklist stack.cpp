@@ -34,19 +34,21 @@ void display(){
     cout<<"\nstack is empty";
     else{
         node* temp=top;
-        do
+        cout<<"Stack: ";
+        while(temp!=NULL)
         {
-              cout<<temp->data<<"--> ";
+            cout<<temp->data<<"--> ";
             temp=temp->next;
-        } while (temp->next!=NULL);
+        }
+        cout<<"NULL\n";
 
-        cout<<temp->data<<"-->NULL";
     }
     cout<<"\n";
 }
 
 int main(){
-    push(5);
+
+push(5);
 push(10);
 display();
 push(11);
@@ -56,6 +58,7 @@ cout<<"after del";
 pop();
 pop();
 display();
+pop();
 pop();
 pop();
 display();

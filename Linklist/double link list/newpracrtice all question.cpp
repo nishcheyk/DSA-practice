@@ -105,7 +105,7 @@ void delanywhere(node*& head,int d){
             if (temp->next != NULL)
             temp->next->prev=temp->prev;
               if (temp->prev != NULL){
-            temp->prev->next=temp->next;
+            //temp->prev->next=temp->next;
               }
             delete(temp);
             return;

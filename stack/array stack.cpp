@@ -11,7 +11,7 @@ void push(int data){
 }
 void pop(){
     if(top<=-1){
-        cout<<"uncderflow";
+        cout<<"underflow";
     }
     else{
         top--;
@@ -44,6 +44,6 @@ pop();
 display();
 pop();
 pop();
-displa();
+display();
 
 }
