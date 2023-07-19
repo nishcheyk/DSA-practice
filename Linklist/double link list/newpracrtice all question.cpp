@@ -75,7 +75,7 @@ void dellast(node*&head){
 void delfirst(node*&head){
 if (head==NULL){
     return;
-} node*temp=NULL;
+} node*temp=head;
 head->next->prev=NULL;
 head=head->next;
 free(temp);
