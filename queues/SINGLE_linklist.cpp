@@ -13,8 +13,8 @@ struct node{
 node* front= NULL;
 node* rear= NULL;
 node* temp= NULL;
-int n=8;
-void Insert(int val){
+//int n=8;
+void enque(int val){
 node* temp= new node(val);
     if(front==NULL){
         front=rear=temp;
@@ -27,7 +27,7 @@ node* temp= new node(val);
 
 void del(){
 if (front==NULL){
-    cout<<"OVERFLOW";
+    cout<<"UNDERFLOW";
 }
 else
 {   node* temp= front;

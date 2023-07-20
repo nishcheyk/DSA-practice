@@ -4,7 +4,7 @@ int queue[5],front=-1,rear=-1,n=5;
 void enqueue(int data){
     if (rear==n-1)
     {
-        cout<<"OVERFLOW";
+        cout<<"OVERFLOW\n";
     }
     else{
     if(front==-1&&rear==-1){
@@ -47,12 +47,15 @@ enqueue(9);
 enqueue(3);
 enqueue(4);
 display();
-delte();z
+delte();
 delte();
 display();
 delte();
 delte();
 delte();
+enqueue(4);
+enqueue(4);
+enqueue(4);
 
 display();
 

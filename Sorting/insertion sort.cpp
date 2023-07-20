@@ -1,30 +1,47 @@
-#include <iostream>
-using namespace std;
-int main()
-{
-    int n;
-    cout << "ENTER THE SIZE OF ARRAY";
-    cin >> n;
-    int arr[n];
-    cout << "enter the values";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];}
-
-//insertion sort
- int i, j, tmp;
-      for (i = 1; i < n; i++) {
-            j = i;
-            while (j > 0 && arr[j - 1] > arr[j]) {
-                  tmp = arr[j];
-                  arr[j] = arr[j - 1];
-                  arr[j - 1] = tmp;
-                  j--;
-            }
-      }
- for (int i = 0; i < n; i++)
-    {
-        cout << arr[i]<<" ";
+node
+8 top=NULL;
+void push(int data){
+    node* n=new node(data);
+    if(top==NULL){
+        n->next=NULL;
     }
+    else
+    n->next=top;
+    top=n;
 
 }
+void pop(){
+    if(top==NULL){
+        cout<<"Stack Underflow"<<endl;
+    }
+    node*temp=top;
+    top=top->next;
+    free(temp);
+}
+node* front=NULL;
+node* rear=NULL;
+node* temp=NULL;
+
+void enque(int val){
+    if(front==NULL){
+        front=rear=temp;
+    }
+    else{
+        rear->next=temp;
+        rear=temp;
+    }
+}
+void deque() {
+    if(front==NULL){
+        cout<<"underflow";
+    }
+else{
+    node* temp=front;
+    if(front==rear){
+        front=rear=NULL;
+        else
+        front=front->next;
+        free(temp);
+    }
+}
+}850
